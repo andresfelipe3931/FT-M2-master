@@ -8,8 +8,8 @@
     div {
       height: 200px;
       width: 200px;
-      border: black 1px solid;
-      background: plum;
+      border: rgb(0, 0, 0) 1px solid;
+      background: rgb(255, 0, 0);
     }
   </style>
 </head>
@@ -23,24 +23,31 @@
     var arreglo = [1, 2, 3]
     var divs = document.querySelectorAll('div');
     var div = document.getElementById('uno');
-    // divs.forEach(function(e) {
-    //   e.addEventListener('click', function(evento) {
-    //     if( evento.target.style.background == 'gray none repeat scroll 0% 0%') {
-    //       evento.target.style.background = 'plum';
-    //     } else {
-    //       evento.target.style.background = 'gray';
-    //     }
-    //   })
-    // })
-    // document.body.addEventListener('mousemove', function(e) {
-    //   // div.style.position = 'fixed';
-    //   // div.style.top = e.clientY + 15 +'px';
-    //   // div.style.left = e.clientX + 152+'px';
-
-    // })
-    document.body.addEventListener('click', function (e) {
-      console.log(e.target);
+divs.forEach(element => {
+  element.addEventListener('click',function(e){
+      
+      e.target.style.background === 'red'? e.target.style.background = 'green':e.target.style.background = 'red';
     })
+});
+    
+ /*    divs.forEach(function(e) {
+       e.addEventListener('click', function(evento) {
+         if( evento.target.style.background == 'gray none repeat scroll 0% 0%') {
+          evento.target.style.background = 'plum';
+       } else {
+           evento.target.style.background = 'gray';
+         }
+      })
+    }) */
+     document.body.addEventListener('mousemove', function(e) {
+     div.style.position = 'fixed';
+     div.style.top = e.clientY + 1 + 'px';
+     div.style.left = e.clientX +1+'px';
+
+     })
+   /*  document.body.addEventListener('click', function (e) {
+      console.log(e.target);
+    }) */
   </script>
 </body>
 
